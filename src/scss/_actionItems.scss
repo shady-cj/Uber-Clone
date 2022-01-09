@@ -21,8 +21,12 @@
             }
             .profile_name {
                 margin-right: 10px;
-                font-size: 0.875rem;
-                line-height: 1.25rem;
+                font-size: 0.7rem;
+                line-height: 1rem;
+                @media (min-width: 900px) {
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
+                }
             }
         }
     }
@@ -60,11 +64,14 @@
     & > .whereToContainer {
         height: $h-20;
         background-color: $primary-color;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         line-height: 2rem;
         display: flex;
         align-items: center;
         padding-left: $p-4;
         margin-top: 32px;
+        @media (min-width: 900px) {
+            font-size: 1.5rem;
+        }
     }
 }

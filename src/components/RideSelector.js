@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { carList } from "../data/carList";
-const RideSelector = () => {
+const RideSelector = ({ rideDuration }) => {
     const [service, setService] = useState("UberX");
     return (
         <div className="ride-container">
@@ -27,7 +27,13 @@ const RideSelector = () => {
                                         {Math.ceil(Math.random() * 10)} min away
                                     </span>
                                 </div>
-                                <div className="price">$24.00</div>
+                                <div className="price">
+                                    {rideDuration &&
+                                        "$" +
+                                            (
+                                                rideDuration * car.multiplier
+                                            ).toFixed(2)}
+                                </div>
                             </div>
                         );
                     })}

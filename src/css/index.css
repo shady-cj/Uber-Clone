@@ -22,6 +22,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1rem;
+  overflow-y: scroll;
 }
 
 .Home-wrapper .mapArea {
@@ -82,8 +83,15 @@
 
 .actionItems > .actionItems_header .profileInfoContainer .profile_name {
   margin-right: 10px;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+
+@media (min-width: 900px) {
+  .actionItems > .actionItems_header .profileInfoContainer .profile_name {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 .actionItems .actionItems_uberLogo {
@@ -143,7 +151,7 @@
 .actionItems > .whereToContainer {
   height: 5rem;
   background-color: #e5e7eb;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,6 +161,12 @@
           align-items: center;
   padding-left: 1rem;
   margin-top: 32px;
+}
+
+@media (min-width: 900px) {
+  .actionItems > .whereToContainer {
+    font-size: 1.5rem;
+  }
 }
 
 .search_wrapper {
@@ -288,6 +302,32 @@
   outline: none;
 }
 
+.LocationInput-container .text-input-container .suggestionBox {
+  position: absolute;
+  width: 60%;
+  height: 30px;
+  background: #e5e7eb;
+  display: none;
+  height: auto;
+  z-index: 5;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.LocationInput-container .text-input-container .suggestionBox p {
+  padding: 0.5rem;
+  border-bottom: 1px solid #9ca3af;
+  cursor: pointer;
+}
+
+.LocationInput-container .text-input-container .suggestionBox p:hover {
+  background: whitesmoke;
+}
+
 .LocationInput-container .plus-icon {
   height: 2.5rem;
   width: 2.5rem;
@@ -342,6 +382,7 @@
       -ms-flex: 1;
           flex: 1;
   width: 100%;
+  overflow-y: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -595,5 +636,66 @@ body {
   overflow-y: scroll;
   background-color: #f5f5f5;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.instructionArea {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  height: 200px;
+  width: 60%;
+  background: -webkit-gradient(linear, left top, right top, from(#e5ebc6), color-stop(#75cff0), to(#e5ebc6));
+  background: linear-gradient(90deg, #e5ebc6, #75cff0, #e5ebc6);
+  -webkit-box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.instructionArea header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0;
+  font-size: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.instructionArea header svg {
+  width: 20px;
+  margin-left: 1rem;
+}
+
+.instructionArea .instructions {
+  overflow-y: scroll;
+  padding: 1rem 2rem;
+}
+
+.instructionArea .instructions p {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 900px) {
+  .instructionArea {
+    left: 10px;
+    width: 30%;
+  }
+  .instructionArea header {
+    font-size: 25px;
+  }
+  .instructionArea header svg {
+    width: 25px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

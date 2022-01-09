@@ -7,6 +7,7 @@ const Confirm = () => {
     const [pickUp, setPickUp] = useState([]);
     const [dropOff, setDropOff] = useState([]);
     const [searchParams, setSearchParams] = useSearchParams();
+    const [rideDuration, setRideDuration] = useState(0);
     const navigate = useNavigate();
     const getPickUpCoordinates = useCallback((pickUpLocation) => {
         fetch(
@@ -34,17 +35,21 @@ const Confirm = () => {
         )
             .then((resp) => resp.json())
             .then((data) => {
-                console.log(data);
                 setDropOff(data.features[0]?.center);
             });
     }, []);
 
     useEffect(() => {
-        console.log();
-
         if (searchParams.get("pickup") && searchParams.get("dropoff")) {
-            getPickUpCoordinates(searchParams.get("pickup"));
-            getDropOffCoordinates(searchParams.get("dropoff"));
+            if (searchParams.get("coords1") && searchParams.get("coords2")) {
+                const coords1 = searchParams.get("coords1").split(",");
+                const coords2 = searchParams.get("coords2").split(",");
+                setDropOff([+coords2[0], +coords2[1]]);
+                setPickUp([+coords1[0], +coords1[1]]);
+            } else {
+                getPickUpCoordinates(searchParams.get("pickup"));
+                getDropOffCoordinates(searchParams.get("dropoff"));
+            }
         } else {
             navigate("/search");
         }
@@ -58,8 +63,12 @@ const Confirm = () => {
                         alt=""
                     />
                 </Link>
-                <Map pickUp={pickUp} dropOff={dropOff} />
-                <RideSelector />
+                <Map
+                    pickUp={pickUp}
+                    dropOff={dropOff}
+                    setRideDuration={setRideDuration}
+                />
+                <RideSelector rideDuration={rideDuration} />
             </div>
         );
     } else {

@@ -9,6 +9,7 @@
         background-color: white;
         @include flexCol;
         padding: $p-4;
+        overflow-y: scroll;
     }
     .mapArea {
         flex-basis: 50%;

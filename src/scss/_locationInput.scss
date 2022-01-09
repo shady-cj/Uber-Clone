@@ -33,6 +33,28 @@
             border: none;
             outline: none;
         }
+        .suggestionBox {
+            position: absolute;
+            width: 60%;
+            height: 30px;
+            background: $primary-color;
+            display: none;
+            height: auto;
+            z-index: 5;
+            padding: $p-3 $p-4;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            p {
+                padding: $mp-2;
+                border-bottom: 1px solid $darker-primary;
+                cursor: pointer;
+                &:hover {
+                    background: $lighter-primary;
+                }
+            }
+        }
     }
     .plus-icon {
         height: $hw-10;
