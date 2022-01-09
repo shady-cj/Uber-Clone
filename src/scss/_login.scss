@@ -1,0 +1,51 @@
+.Login-wrapper {
+    @include flexCol;
+    height: 100vh;
+    background-color: $primary-color;
+    padding: $p-4;
+    .signin-btn {
+        text-align: center;
+        padding: $p-4 0;
+        margin-top: 2rem;
+        width: 100%;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        align-self: center;
+        border-radius: $mp-2;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .login-uberlogo {
+        height: $hw-10;
+        object-fit: contain;
+        align-self: flex-start;
+        width: auto;
+        margin-top: $p-4;
+    }
+    .login-title {
+        padding-top: $p-4;
+        font-size: 3rem;
+        line-height: 1;
+        color: rgb(107, 114, 128);
+    }
+    .login-mainImage {
+        height: 16rem;
+        object-fit: contain;
+    }
+    @media (min-width: 900px) {
+        .login-mainImage {
+            height: 20rem;
+        }
+        .login-title {
+            text-align: center;
+        }
+        .signin-btn {
+            padding: 1.2rem;
+        }
+        .login-uberlogo {
+            height: $h-14;
+        }
+    }
+}

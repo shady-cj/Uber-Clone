@@ -1,0 +1,21 @@
+.Home-wrapper {
+    @include flexCol;
+    height: 100vh;
+
+    background-color: red;
+
+    .actionItems {
+        flex-basis: 50%;
+        background-color: white;
+        @include flexCol;
+        padding: $p-4;
+    }
+    .mapArea {
+        flex-basis: 50%;
+        background-color: white;
+    }
+    @media (min-width: 900px) {
+        flex-direction: row;
+    }
+}
+@import "actionItems";

@@ -1,0 +1,18 @@
+$primary-color: rgb(229, 231, 235);
+$darker-primary: rgb(156, 163, 175);
+$lighter-primary: rgb(245, 245, 245);
+$h-12: 3rem;
+$h-14: 3.5rem;
+$h-28: 7rem;
+$h-32: 8rem;
+$h-20: 5rem;
+$p-3: 0.75rem;
+$p-4: 1rem;
+
+$hw-10: 2.5rem;
+$m-1: 0.25rem;
+$mp-2: 0.5rem;
+@mixin flexCol {
+    display: flex;
+    flex-direction: column;
+}

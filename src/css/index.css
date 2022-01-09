@@ -1,0 +1,599 @@
+.Home-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background-color: red;
+}
+
+.Home-wrapper .actionItems {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+}
+
+.Home-wrapper .mapArea {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: white;
+}
+
+@media (min-width: 900px) {
+  .Home-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.actionItems > .actionItems_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.actionItems > .actionItems_header .profileInfoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.actionItems > .actionItems_header .profileInfoContainer .profile_picture {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  padding: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #e5e7eb;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+
+.actionItems > .actionItems_header .profileInfoContainer .profile_name {
+  margin-right: 10px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.actionItems .actionItems_uberLogo {
+  height: 7rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.actionItems > .actionItems_actionbuttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.actionItems > .actionItems_actionbuttons .actionButton {
+  background-color: #e5e7eb;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 8rem;
+  margin: 0.25rem;
+  color: black;
+  text-decoration: none;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 8px;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  cursor: pointer;
+}
+
+.actionItems > .actionItems_actionbuttons .actionButton img {
+  height: 60%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.actionItems > .actionItems_actionbuttons .actionButton:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.actionItems > .whereToContainer {
+  height: 5rem;
+  background-color: #e5e7eb;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1rem;
+  margin-top: 32px;
+}
+
+.search_wrapper {
+  background-color: #e5e7eb;
+  height: 100vh;
+}
+
+.search_wrapper .backBtnCon {
+  background-color: white;
+  display: block;
+  padding: 0 1rem;
+}
+
+.search_wrapper .backBtnCon img {
+  cursor: pointer;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  border-radius: 50%;
+}
+
+.search_wrapper .backBtnCon img:hover {
+  background-color: whitesmoke;
+}
+
+.search_wrapper .saved-places {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.search_wrapper .saved-places img {
+  background-color: #9ca3af;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.search_wrapper .confirmButtonContainer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin: 0.5rem 1rem 0;
+  padding: 0.75rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .search_wrapper .confirmButtonContainer {
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .search_wrapper {
+    padding: 70px 150px 0px;
+  }
+}
+
+.LocationInput-container {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+}
+
+.LocationInput-container .from-to-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0.5rem;
+}
+
+.LocationInput-container .from-to-icons img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.LocationInput-container .from-to-icons .circle-icon {
+  height: 0.625rem;
+}
+
+.LocationInput-container .from-to-icons .line-icon {
+  height: 2.5rem;
+}
+
+.LocationInput-container .from-to-icons .square-icon {
+  height: 0.75rem;
+}
+
+.LocationInput-container .text-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.LocationInput-container .text-input-container input {
+  height: 2.5rem;
+  background-color: #e5e7eb;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.LocationInput-container .plus-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #e5e7eb;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+
+.error_page {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.error_page div {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 900px) {
+  .error_page div {
+    font-size: 2rem;
+  }
+}
+
+.error_page div:last-child {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  border-left: 2px solid #e5e7eb;
+}
+
+.confirm_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.confirm_wrapper .ride-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.confirm_wrapper .mapArea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.confirm_wrapper .back-btn {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 3;
+  background: white;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.confirm_wrapper .back-btn img {
+  height: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .confirm_wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.loading_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-size: 5vw;
+  font-weight: 600;
+}
+
+.rideSelectorWrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow-y: scroll;
+}
+
+.rideSelectorWrapper .rideSelectorTitle, .rideSelectorWrapper .rideSelectorTitle-lg {
+  color: #6b7280;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #9ca3af;
+}
+
+.rideSelectorWrapper .rideSelectorTitle-lg {
+  display: block;
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .rideSelectorWrapper .rideSelectorTitle, .rideSelectorWrapper .rideSelectorTitle-lg {
+    display: none;
+  }
+  .rideSelectorWrapper .rideSelectorTitle-lg {
+    display: block;
+  }
+}
+
+.rideSelectorWrapper .carSelectorList .car {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.rideSelectorWrapper .carSelectorList .car img {
+  height: 3.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 1rem;
+}
+
+.rideSelectorWrapper .carSelectorList .car .car_details {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rideSelectorWrapper .carSelectorList .car .car_details .service {
+  font-weight: 501;
+}
+
+.rideSelectorWrapper .carSelectorList .car .car_details .time {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #3b82f6;
+}
+
+.rideSelectorWrapper .carSelectorList .car .price {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.confirmRideContainer {
+  border-top: 1px solid #9ca3af;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.confirmRideContainer button {
+  background: black;
+  color: white;
+  margin: 1rem;
+  width: 100%;
+  border: none;
+  text-align: center;
+  padding: 1rem 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.Login-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background-color: #e5e7eb;
+  padding: 1rem;
+}
+
+.Login-wrapper .signin-btn {
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.Login-wrapper .login-uberlogo {
+  height: 2.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: auto;
+  margin-top: 1rem;
+}
+
+.Login-wrapper .login-title {
+  padding-top: 1rem;
+  font-size: 3rem;
+  line-height: 1;
+  color: #6b7280;
+}
+
+.Login-wrapper .login-mainImage {
+  height: 16rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (min-width: 900px) {
+  .Login-wrapper .login-mainImage {
+    height: 20rem;
+  }
+  .Login-wrapper .login-title {
+    text-align: center;
+  }
+  .Login-wrapper .signin-btn {
+    padding: 1.2rem;
+  }
+  .Login-wrapper .login-uberlogo {
+    height: 3.5rem;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*# sourceMappingURL=index.css.map */

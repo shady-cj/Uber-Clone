@@ -1,0 +1,44 @@
+.LocationInput-container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: $mp-2;
+    padding: $p-4;
+    .from-to-icons {
+        @include flexCol;
+        width: $hw-10;
+        align-items: center;
+        margin-right: $mp-2;
+        img {
+            object-fit: contain;
+        }
+        .circle-icon {
+            height: 0.625rem;
+        }
+        .line-icon {
+            height: 2.5rem;
+        }
+        .square-icon {
+            height: 0.75rem;
+        }
+    }
+    .text-input-container {
+        @include flexCol;
+        flex: 1;
+        input {
+            height: $hw-10;
+            background-color: $primary-color;
+            margin: $mp-2 0;
+            padding: $mp-2;
+            border: none;
+            outline: none;
+        }
+    }
+    .plus-icon {
+        height: $hw-10;
+        width: $hw-10;
+        background-color: $primary-color;
+        border-radius: 50%;
+        margin-left: $mp-2;
+    }
+}

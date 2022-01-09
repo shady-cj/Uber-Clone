@@ -1,0 +1,78 @@
+.rideSelectorWrapper {
+    flex: 1;
+    overflow-y: scroll;
+    .rideSelectorTitle {
+        color: rgb(107, 114, 128);
+        text-align: center;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        padding: $mp-2 0;
+        border-bottom: 1px solid $darker-primary;
+    }
+    .rideSelectorTitle-lg {
+        @extend .rideSelectorTitle;
+        display: block;
+        padding: $p-3 0;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        display: none;
+    }
+    @media (min-width: 900px) {
+        .rideSelectorTitle {
+            display: none;
+        }
+        .rideSelectorTitle-lg {
+            display: block;
+        }
+    }
+    .carSelectorList {
+        .car {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: $p-4;
+            img {
+                height: $h-14;
+                object-fit: contain;
+                margin-right: $p-4;
+            }
+            .car_details {
+                flex: 1;
+                @include flexCol;
+
+                .service {
+                    font-weight: 501;
+                }
+                .time {
+                    font-size: 0.75rem;
+                    line-height: 1rem;
+                    color: rgb(59, 130, 246);
+                }
+            }
+            .price {
+                font-size: 0.75rem;
+                line-height: 1rem;
+            }
+        }
+    }
+}
+.confirmRideContainer {
+    border-top: 1px solid $darker-primary;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+        background: black;
+        color: white;
+        margin: $p-4;
+        width: 100%;
+        border: none;
+        text-align: center;
+        padding: $p-4 0;
+        outline: none;
+        cursor: pointer;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}
