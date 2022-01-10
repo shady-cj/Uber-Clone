@@ -147,15 +147,28 @@ const Map = ({ pickUp, dropOff, setRideDuration }) => {
                         function (pos) {
                             let lat = pos.coords.latitude;
                             let lon = pos.coords.longitude;
-                            resolve({ lat, lon });
+                            fetch(
+                                `https://api.mapbox.com/geocoding/v5/mapbox.places/${lat},${lon}.json?access_token=${mapboxgl.accessToken}`
+                            )
+                                .then((res) => res.json())
+                                .then((data) => {
+                                    if (data.features.length > 0) {
+                                        resolve({ lat, lon });
+                                    } else {
+                                        alert("Something went wrong...");
+                                        resolve({
+                                            lat: -99.29011,
+                                            lon: 39.39172,
+                                        });
+                                    }
+                                });
                         },
                         function (err) {
                             if (err.code === err.PERMISSION_DENIED) {
-                                // pop up dialog asking for location
                                 mapArea = loadMap(-99.29011, 39.39172);
                                 bounds = [
-                                    [-99.069003, 39.385273],
-                                    [-99.303707, 39.412333],
+                                    [-99.069003, 31.385273],
+                                    [-88.303707, 40.412333],
                                 ];
                                 mapArea.setMaxBounds(bounds);
                             }
@@ -169,8 +182,8 @@ const Map = ({ pickUp, dropOff, setRideDuration }) => {
             locationPromise.then(function (value) {
                 mapArea = loadMap(value.lat, value.lon);
                 bounds = [
-                    [value.lat - 0.50669, value.lon - 0.13478],
-                    [value.lat + 0.448616, value.lon + 0.1088579],
+                    [value.lat - 8.50669, value.lon - 5.13478],
+                    [value.lat + 7.448616, value.lon + 4.1088579],
                 ];
 
                 mapArea.setMaxBounds(bounds);
