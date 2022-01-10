@@ -642,7 +642,8 @@ body {
   position: absolute;
   top: 4px;
   right: 4px;
-  height: 200px;
+  min-height: 40px;
+  max-height: 250px;
   width: 60%;
   background: -webkit-gradient(linear, left top, right top, from(#e5ebc6), color-stop(#75cff0), to(#e5ebc6));
   background: linear-gradient(90deg, #e5ebc6, #75cff0, #e5ebc6);
@@ -670,11 +671,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .instructionArea header svg {
   width: 20px;
   margin-left: 1rem;
+}
+
+.instructionArea header img {
+  width: 20px;
+  height: 20px;
+  margin-left: 3rem;
+  cursor: pointer;
 }
 
 .instructionArea .instructions {
@@ -684,6 +693,10 @@ body {
 
 .instructionArea .instructions p {
   margin-bottom: 0.5rem;
+}
+
+.instructionArea .hideInstructions {
+  display: none;
 }
 
 @media (min-width: 900px) {
@@ -696,6 +709,19 @@ body {
   }
   .instructionArea header svg {
     width: 25px;
+  }
+}
+
+.switchOnDirection {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (min-width: 900px) {
+  .switchOnDirection {
+    left: 20px;
+    width: 50px;
   }
 }
 /*# sourceMappingURL=index.css.map */

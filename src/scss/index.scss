@@ -21,7 +21,8 @@ body {
     position: absolute;
     top: 4px;
     right: 4px;
-    height: 200px;
+    min-height: 40px;
+    max-height: 250px;
     width: 60%;
     background: linear-gradient(90deg, #e5ebc6, #75cff0, #e5ebc6);
     box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.08);
@@ -33,9 +34,16 @@ body {
         font-size: 20px;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         svg {
             width: 20px;
             margin-left: $p-4;
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            margin-left: 3rem;
+            cursor: pointer;
         }
     }
     .instructions {
@@ -44,6 +52,9 @@ body {
         p {
             margin-bottom: $mp-2;
         }
+    }
+    .hideInstructions {
+        display: none;
     }
     @media (min-width: 900px) {
         left: 10px;
@@ -55,5 +66,14 @@ body {
                 width: 25px;
             }
         }
+    }
+}
+.switchOnDirection {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @media (min-width: 900px) {
+        left: 20px;
+        width: 50px;
     }
 }
